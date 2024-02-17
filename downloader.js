@@ -3,7 +3,7 @@ const fs = require("fs");
 const axios = require("axios");
 const path = require('path');
 
-const visitedLinks = new Set();
+const downloadLinks = new Set();
 
 const c = new Crawler({
     maxConnections : 10, //use this for parallel, rateLimit for individual
@@ -16,7 +16,6 @@ const c = new Crawler({
             let $ = res.$; //get cheerio data, see cheerio docs for info
             let links = $("a") //get all links from page
 
-            
             $(links).each(function(i, link){
                 //Log out links
                 var websiteLink = $(link).attr('href');
@@ -25,14 +24,11 @@ const c = new Crawler({
                     if(websiteLink.includes(".pdf")){
                         // console.log("Title: " + websiteLinkTitle);
                         // console.log(websiteLinkTitle + ':  ' + websiteLink);
-                        visitedLinks.add(websiteLink);
+                        downloadLinks.add(websiteLink);
                     }
                 }
-                
-                
             });
         }
-
         done();
     }
 });
@@ -66,22 +62,19 @@ const downloadPDF = async (pdfUrl, folderName, fileName) => {
         });
 
         console.log('PDF downloaded successfully');
-        visitedLinks.delete(pdfUrl);//remove when downloaded successfully
+        downloadLinks.delete(pdfUrl);//remove when downloaded successfully
     } catch (error) {
         console.error('Error downloading PDF:', error);
     }
 };
 
-//Perhaps a useful event
 //Triggered when the queue becomes empty
-//There are some other events, check crawler docs
 c.on('drain',async function(){
     console.log("Done.");
-    // while(visitedLinks.size != 0){//keep trying until they all download
-    visitedLinks.forEach(async link => {
+    downloadLinks.forEach(async link => {
         var linkCopy = link.toLowerCase();
         if(linkCopy.includes("application") || linkCopy.includes("form") || linkCopy.includes("faq") || linkCopy.includes("guideline")){
-            visitedLinks.delete(link);
+            downloadLinks.delete(link);
         }else{
             var fileName = link.split("/");
             fileName = fileName[fileName.length - 1];
@@ -89,11 +82,9 @@ c.on('drain',async function(){
     
             downloadPDF(link,"allPDFs",fileName);
         }
-    });       
-    // }    
+    });
     
-    
-    console.log("Links Downloaded Size: ",visitedLinks.size);
+    console.log("Links Downloaded Size: ",downloadLinks.size);
 });
 
 //Queue a URL, which starts the crawl
