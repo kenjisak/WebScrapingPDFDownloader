@@ -1,21 +1,15 @@
 const OpenAIApi = require("openai");
 
 const openai = new OpenAIApi({
-    apiKey: "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",
+    apiKey: "sk-YourApiKeyHere",
 });
 
 const getResponse = async (prompt) => {
     const response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo-0125",
+        model: "gpt-3.5-turbo",
         messages: [
-            { role: "user", content: "What are the Required Textbooks from this given outline? and output it in this given JSON format { Course:, Term:,List of Required Textbooks:[{ title:, authors:, isbn:}]} and ONLY that: " + prompt },
-            
-            { role: "system", content: "You are a helpful assistant." }
-            // {
-            // Course:, 
-            // Term:,
-            // List of Required Textbooks:[{ title:, authors:, isbn:}]
-            // }
+            { role: "user", content: "What are the Required Textbooks from this given outline?: " + prompt },
+            // { role: "system", content: "You are a helpful assistant." },
         ],
         temperature: 0,
         max_tokens: 300,
