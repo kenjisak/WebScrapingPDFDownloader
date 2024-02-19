@@ -7,61 +7,47 @@ const openai = new OpenAIApi({
     apiKey: "sk-YourApiKeyHere",
 });
 
-
-
 const DEFAULT_OPTIONS = {
     max: 2,
 }
 // Function to read all PDF files in a folder and extract text from the first two pages
-function extractTextFromPDFs(folderName) {
-    try {
-        // Get the absolute path of the folder
-        const folderPath = path.join(__dirname, folderName);
+async function extractTextFromPDFs(folderName) {
+    
+    var numReqTextFound = 0;
+    const folderPath = path.join(__dirname, folderName);// Get the absolute path of the folder
+    const files = fs.readdirSync(folderPath);// Read all files in the folder
+    
+    for (const file of files) {
 
-        // Read all files in the folder
-        const files = fs.readdirSync(folderPath);
-        var numReqTextFound = 0;
-
-        // Loop through each file
-        for (const file of files) {
-            // Check if the file is a PDF
-            const filePath = path.join(folderPath, file);
-
-            // Read the PDF file
-            const dataBuffer = fs.readFileSync(filePath);
-            
-            
-            pdfParse(dataBuffer,DEFAULT_OPTIONS).then(async function(data) {
-                
-                var jsonText = await getResponse(data.text);
-                
-                var jsonTextObj = JSON.parse(jsonText);
-                if(jsonTextObj['List of Required Textbooks'].length > 0){
-                    numReqTextFound++;
-                    console.log("Num PDF Text Found: " + numReqTextFound);
-                    // console.log(jsonTextObj);
-                    //append this json format object to a json file, make it a list of json objects
-
-                    let rawdata = fs.readFileSync('foundTexts.json');
-                    let foundTexts = JSON.parse(rawdata);
-
-                    foundTexts.push(jsonTextObj);
-                    fs.writeFileSync('foundTexts.json', JSON.stringify(foundTexts),function(err){
-                        if(err) throw err;
-                    });
-                }
-
-            });
-            break; // Remove this line to process all PDFs in the folder
-        }
+        const filePath = path.join(folderPath, file);
+        const dataBuffer = fs.readFileSync(filePath);// Read the PDF file
         
-    } catch (error) {
-        console.error('Error:', error);
+        pdfParse(dataBuffer,DEFAULT_OPTIONS).then(async function(data) {
+            
+            var jsonText = await getResponse(data.text);
+            var jsonTextObj = JSON.parse(jsonText);
+
+            if(jsonTextObj['List of Required Textbooks'].length > 0){
+                numReqTextFound++;
+                console.log("Num PDF Text Found: " + numReqTextFound);
+                // console.log(jsonTextObj);
+                
+                let rawdata = fs.readFileSync('foundTexts.json');
+                let foundTexts = JSON.parse(rawdata);
+                foundTexts.push(jsonTextObj);
+
+                fs.writeFileSync('foundTexts.json', JSON.stringify(foundTexts),function(err){//add pdf textbooks object to a json file
+                    if(err) throw err;
+                });
+            }
+        });
+        await sleep(20);//rate limit to request every 20 seconds, 3 requests per minute for GPT-3
+        break; // Remove this line to process all PDFs in the folder
     }
 }
 
-
-const getResponse = async (prompt) => {
+// Function to get a response from OpenAI
+async function getResponse(prompt) {
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo-0125",
         messages: [
@@ -79,6 +65,11 @@ const getResponse = async (prompt) => {
     console.log(response.choices[0].message.content);
     return response.choices[0].message.content;
 };
+
+function sleep(seconds) {
+    let ms = seconds * 1000;
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 // Call the function with the folder name
 const folderName = 'allPDFs';
