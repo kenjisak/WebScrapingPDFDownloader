@@ -1,26 +1,28 @@
 const OpenAIApi = require("openai");
+const mongoose = require("mongoose");
 
 const openai = new OpenAIApi({
-    apiKey: "sk-YourApiKeyHere",
+  apiKey: "sk-YourApiKeyHere",
 });
 
-const getResponse = async (prompt) => {
-    const response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        messages: [
-            { role: "user", content: "What are the Required Textbooks from this given outline?: " + prompt },
-            // { role: "system", content: "You are a helpful assistant." },
-        ],
-        temperature: 0,
-        max_tokens: 300,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-    });
-    console.log(response.choices[0].message);
-};
+async function getResponse(prompt) {
+  const response = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: [
+        { role: "user", content: "What are the Required Textbooks from this given outline? and output it in this given JSON format { Course:, Term:,List of Required Textbooks:[{ title:, authors:, isbn:}]} and ONLY that, DO NOT ADD ANY ``` or json in the response: " + prompt },
 
-getResponse(`
+        { role: "system", content: "You are a helpful assistant." },
+    ],
+    temperature: 0,
+    max_tokens: 300,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0,
+  });
+  console.log(response.choices[0].message.content);
+}
+
+let testPrompt = `
 REQUIRED TEXTS 
  
 1. Stephen Tasson, Rebecca Bromwich, Jane Dickson, Vincent Kazmierski, Bettina Appel Kuzmarov, 
@@ -39,4 +41,27 @@ checking the ISBN number is the best way to be certain.
 Copies of the Course Reader and the Ruddell-Pavlich text have also been placed on reserve at the 
 MacOdrum Library, and are available for 2-hour periods on a first come, first served, basis. 
 LAWS 1001 A/T  FALL - 2019 
-`);
+`;
+
+async function connectToDB() {
+    let databaseName = "PDFTextbooksScraper";
+    mongoose.connect("mongodb://127.0.0.1:27017/" + databaseName);
+    mongoose.connection.on("error", (err) => {
+      console.log("err", err);
+    });
+    mongoose.connection.on("connected", (err, res) => {
+      console.log("mongoose is connected");
+    });
+    console.log("Connected to MongoDB");
+    return mongoose.connection;
+}
+
+async function addToTextbooksList() {
+    let db = await connectToDB();
+    await getResponse(testPrompt)
+   // let resObj = JSON.parse(await getResponse(testPrompt));
+
+    //await db.collection("TextbooksList").insertOne(resObj);
+}
+
+addToTextbooksList();
