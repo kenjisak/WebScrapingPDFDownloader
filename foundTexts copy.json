@@ -1,0 +1,750 @@
+[
+    {
+        "Course": "LAWS 1001 A/T",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Introduction to Legal Studies: Foundations and Rights Protection (vol.1) Canadian Legal Studies Series",
+                "authors": "Stephen Tasson, Rebecca Bromwich, Jane Dickson, Vincent Kazmierski, Bettina Appel Kuzmarov, Sébastien Malette, Umut Öszu (eds.)",
+                "isbn": "978-1-55322-375-7"
+            },
+            {
+                "title": "Exploring Criminal Justice in Canada - Law and Society Redefined, Carleton University Custom Edition",
+                "authors": "Rick Ruddell, George Pavlich",
+                "isbn": "9780199015658"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 1001B - Introduction to Legal Studies I: Foundations & Rights Protection",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Introduction to Legal Studies: Foundations and Rights Protection (vol.1) Canadian Legal Studies Series",
+                "authors": "Stephen Tasson, Rebecca Bromwich, Jane Dickson, Vincent Kazmierski, Bettina Appel Kuzmarov, Sébastien Malette, Umut Öszu (eds.)",
+                "isbn": "978-1-55322-375-7"
+            },
+            {
+                "title": "Looking at Law: Canada’s Legal System, 7th ed.",
+                "authors": "Patrick Fitzgerald, Barry Wright, and Vincent Kazmierski",
+                "isbn": "978-0-433-49892-6"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 1001C Introduction to Legal Studies 1: Foundations and Rights Protection",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Looking at Law: Canada’s Legal System 7th edition",
+                "authors": "Barry Wright, Vincent Kazmierski, Betina Appel Kuzmarov, Rebecca Bromwich",
+                "isbn": "9780433504487"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2105 A&T - Social Justice and Human Rights",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Eichmann in Jerusalem: A Report on the Banality of Evil",
+                "authors": "Hannah Arendt",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2201A/T",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Just Relationships",
+                "authors": "Hanoch Dagan & Avihay Dorfmann",
+                "isbn": "116 Columbia Law Review 1395"
+            },
+            {
+                "title": "The History of The Public/Private Distinction",
+                "authors": "Morton J. Horwitz",
+                "isbn": "130 University of Pennsylvania Law Review 1423"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2201B - Persons and Property",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Just Between the Law and Us Volume 1: Persons and Property",
+                "authors": "Neil Sargent and Logan Atkinson",
+                "isbn": "ISBN: 978-1927356445"
+            },
+            {
+                "title": "Private Law, Social Life",
+                "authors": "Logan Atkinson and Neil Sargent",
+                "isbn": "ISBN: 978-0433456789"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2202A - Obligations",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Obligations in Private Law",
+                "authors": "T. Brettel Dawson",
+                "isbn": "Captus Press"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2202B - Obligations",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Obligations in Private Law",
+                "authors": "T. Brettel Dawson",
+                "isbn": "Captus Press"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2301 A/T - Criminal Justice System",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Canadian Criminal Justice: A Primer",
+                "authors": "Curt Griffiths",
+                "isbn": "9780176720001"
+            },
+            {
+                "title": "Canadian Criminal Justice Policy: Contemporary Perspectives",
+                "authors": "Karim Ismaili, Jane Sprott, Kim Varma",
+                "isbn": "9780195440002"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2301B - Criminal Justice System",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Canadian Criminal Justice: A Primer",
+                "authors": "Griffiths, C.T.",
+                "isbn": "Nelson College Indigenous, Toronto. 6th Edition."
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2301C - Criminal Justice System",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Criminal Law in Canada: An Introduction to the Theoretical Social and Legal Contexts, Fifth Edition",
+                "authors": "Ron Saunders & Rebecca Bromwich",
+                "isbn": "978-0-7798-7298-5"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2302A - Criminal Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Criminal Law in Canada: An Introduction to the Theoretical, Social and Legal Contexts",
+                "authors": "R.P. Saunders & Rebecca Bromwich",
+                "isbn": "978-0779882891"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2302 B/D - Criminal Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Learning Canadian Criminal Law",
+                "authors": "Don Stuart and Steve Coughlan",
+                "isbn": "14th ed., Carswell, 2018"
+            },
+            {
+                "title": "Pocket Criminal Code 2020",
+                "authors": "",
+                "isbn": "Carswell, 2019"
+            },
+            {
+                "title": "Tremeear’s Annotated Criminal Code 2020",
+                "authors": "",
+                "isbn": "Carswell, 2019"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2502A",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "The Trial",
+                "authors": "Franz Kafka",
+                "isbn": "9780805209990"
+            },
+            {
+                "title": "Introduction to Public Law: Readings on the Law, State, and Citizen",
+                "authors": "Nick E. Milanovic",
+                "isbn": "Not provided"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2502B – Law, State and Citizen",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Introduction to Public Law: Readings on the Law, State, and Citizen",
+                "authors": "Nick E. Milanovic, ed.",
+                "isbn": "ISBN not provided"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2601 A/T - Public International Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Public International Law",
+                "authors": "John H. Currie",
+                "isbn": "9781552393644"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2601 B - Public International Law",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "International Law",
+                "authors": "Malcolm Shaw",
+                "isbn": "9781108478794"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2908A - Approaches in Legal Studies I",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "McGill Law Journal, Canadian Guide to Uniform Legal Citation",
+                "authors": "Thomson Reuters",
+                "isbn": "978-0779888826"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2908B - Approaches in Legal Studies I",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "McGill Law Journal, Canadian Guide to Uniform Legal Citation",
+                "authors": "Thomson Reuters",
+                "isbn": "978-0779888826"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 2908C - Approaches in Legal Studies",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "McGill Law Journal, Canadian Guide to Uniform Legal Citation, 9th ed",
+                "authors": "Scarborough, Ontario: Carswell, 2018",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3003 A&B",
+        "Term": "2019-2020",
+        "List of Required Textbooks": [
+            {
+                "title": "Contracts: Cases and Commentaries",
+                "authors": "Stephanie Ben-Ishai and David R. Percy",
+                "isbn": "978-0779882891"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3005A - Law and Regulation",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Political Theology",
+                "authors": "Walter Benjamin, Max Weber, Carl Schmitt",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Various Readings on Governmentality",
+                "authors": "Michel Foucault",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3206A - Banking Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Bank and Customer Law in Canada",
+                "authors": "M.H Ogilvie",
+                "isbn": "2nd edition (Toronto, Irwin Law Inc., 2013)"
+            },
+            {
+                "title": "Banking Law: Cases and Materials",
+                "authors": "M.H. Ogilvie",
+                "isbn": "5th edition, (Toronto: Captus Press, 2015)"
+            },
+            {
+                "title": "Why Banking Systems Succeed – And Fail",
+                "authors": "Charles Calomris and Stephen Haber",
+                "isbn": "Foreign Affairs, November/December 2013"
+            },
+            {
+                "title": "The Financial Rebalancing Act",
+                "authors": "Allan M. Taylor",
+                "isbn": "Foreign Affairs, pages 91 to 99, July/August 2011"
+            },
+            {
+                "title": "Faulty Basel",
+                "authors": "Marc Levinson",
+                "isbn": "Foreign Affairs, pages 76 to 88, May/June 2010"
+            },
+            {
+                "title": "’Breaking the Banks",
+                "authors": "Tom Keatinge",
+                "isbn": "Foreign Affairs, June 2014"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS/HIST 3305B Crime and State in History",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Barry Wright, LAWS 3305 HIST 3305 Crime and State in History (2019 ed.)",
+                "authors": "Barry Wright",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3306 A/T - Crime, Law, Process & Politics",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Due Process and Victims' Rights: The New Law and Politics of Criminal Justice",
+                "authors": "Kent Roach",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3307A - Youth and Criminal Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Youth Criminal Justice Law",
+                "authors": "Nicholas Bala and Sanjeev Anand",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3307B - Youth and Criminal Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Youth Criminal Justice Law",
+                "authors": "Nicholas Bala and Sanjeev Anand",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3401A - Employment Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "The Law of Work. Complete Edition",
+                "authors": "David J. Doorey",
+                "isbn": "9781772551155"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3502A – Regulating Freedom of Expression in Canada",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Law's Expression: Communication, Law and Media in Canada",
+                "authors": "Sheryl N. Hamilton, Sandra Robinson",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3602A — International Human Rights",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "International Human Rights",
+                "authors": "Philip Alston and Ryan Goodman (eds.)",
+                "isbn": "978-0-19-957872-6"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 3800A - Law of Environmental Quality",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Environmental Law",
+                "authors": "Jamie Benidickson",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "Religion and the State in Canada",
+        "Term": "LAWS 4006 A&B 2019-2020",
+        "List of Required Textbooks": [
+            {
+                "title": "Religious Institutions and the Law in Canada",
+                "authors": "M.H. Ogilvie",
+                "isbn": "978-1552214567"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4106 Law and Violence",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Starve and Immolate: The Politics of Human Weapons",
+                "authors": "Banu Bargu",
+                "isbn": "9780231163408"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4204A - Legal Issues in eCommerce",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Legal Issues in Electronic Commerce",
+                "authors": "R.L. Campbell",
+                "isbn": "Fourth Edition"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4209A - Topics in Business Law: Business Dispute Resolution and the Rule of Law",
+        "Term": "Fall 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Litigating and Arbitrating Business Disputes",
+                "authors": "Igor Ellyn",
+                "isbn": "Lexis Nexis 2015"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4302A - Legal Regulation of Corporate Crime",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "N. Sargent, Coursepack on Legal Regulation of Corporate Crime. Ottawa: Haven Books, 2019",
+                "authors": "N. Sargent",
+                "isbn": ""
+            },
+            {
+                "title": "Sally S. Simpson, Corporate Crime, Law and Social Control. Cambridge: Cambridge University Press, 2002 (Available from Haven Books)",
+                "authors": "Sally S. Simpson",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4303A - Drugs, The User and The State",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Coursepack (compiled reading material)",
+                "authors": "N/A",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4303B – Drugs, The User and The State",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Coursepack sold through Octopus Books",
+                "authors": "N/A",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4306A - Criminal Law Issues: Socio-Legal Approaches to Organized Crime",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Canadian Organized Crime",
+                "authors": "Stephen Schneider",
+                "isbn": "978-1-77338-024-7"
+            },
+            {
+                "title": "Bad Blood (Business or Blood)",
+                "authors": "Peter Edwards & Antonio Nicaso",
+                "isbn": "978-073-5274-549"
+            },
+            {
+                "title": "The Secret Life of Bikers",
+                "authors": "Jerry Langdon",
+                "isbn": "9781-4434-5468-1"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4308A - Sentencing",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Sentencing and Penal Policy in Canada: Cases, Materials and Commentary",
+                "authors": "Manson, Allan S., Healy, Patrick et al",
+                "isbn": "978-1-555239-655-1"
+            },
+            {
+                "title": "The Law of Sentencing",
+                "authors": "Manson, Allan",
+                "isbn": "978-1-552-029-1"
+            },
+            {
+                "title": "Criminal Code of Canada",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "Corrections and Conditional Release Act",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "Universal Declaration of Human Rights, 1948",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "Canadian Victims Bill of Rights",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "Youth Criminal Justice Act",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "Controlled Drugs and Substances Act",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "Punishment",
+                "authors": "Bedu, Hugo Adam and Kelly Erin",
+                "isbn": ""
+            },
+            {
+                "title": "Canadian Charter of Rights and Freedoms",
+                "authors": "",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4308B - Sentencing",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Sentencing and Penal Policy in Canada: Cases, Materials and Commentary",
+                "authors": "Manson, Allan S., Healy, Patrick et al",
+                "isbn": "978-1-555239-655-1"
+            },
+            {
+                "title": "The Law of Sentencing",
+                "authors": "Manson, Allan",
+                "isbn": "978-1-552-029-1"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4603.A - Transitional Justice",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "The Implicated Subject: Beyond Victims and Perpetrators",
+                "authors": "Michael Rothberg",
+                "isbn": "9781503605703"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4606A - International Law of Armed Conflict",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "N/A",
+                "authors": "N/A",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4607A - Immigration and Refugee Law",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "All articles, cases and other materials can be found either on cuLearn, as an eBook at the library or online",
+                "authors": "",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4800A - Environment and Social Justice",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Speaking for Ourselves: Environmental Justice in Canada",
+                "authors": "edited by J. Agyeman, P. Cole, R Haluza-Delay, P. O’Riley",
+                "isbn": ""
+            },
+            {
+                "title": "Winning Back the Words: Confronting experts in environmental Public Hearings",
+                "authors": "",
+                "isbn": ""
+            },
+            {
+                "title": "LAWS 4800A Course pack",
+                "authors": "",
+                "isbn": ""
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 4802A - Criminal Jury Trials",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "We, the Jury",
+                "authors": "Jeffrey B. Abramson",
+                "isbn": "N/A"
+            },
+            {
+                "title": "The Jury Under Fire: Myth, Controversy, and Reform",
+                "authors": "Brian H. Bornstein, Edie Greene",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Jury nullification: The evolution of a doctrine",
+                "authors": "Clay S. Conrad",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Learning Canadian criminal procedure",
+                "authors": "R. J. Delisle, Don Stuart",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Commonsense justice: jurors’ notions of the law",
+                "authors": "Norman J. Finkel",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Canadian criminal jury trials",
+                "authors": "Christopher Granger, Louise Charron, Paul Chumak",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Judging the Jury",
+                "authors": "Valerie P. Hans, Neil Vidmar",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Inside the Jury",
+                "authors": "Reid Hastie, Steven D. Penrod, Nancy Pennington",
+                "isbn": "N/A"
+            },
+            {
+                "title": "The American jury on trial: Psychological perspectives",
+                "authors": "Saul M. Kassin, Lawrence S. Wrightsman",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Taking psychology and law into the twenty-first century",
+                "authors": "James R. P. Ogloff",
+                "isbn": "N/A"
+            },
+            {
+                "title": "The psychological foundations of evidence law",
+                "authors": "Michael J. Saks, Barbara A. Spellman",
+                "isbn": "N/A"
+            },
+            {
+                "title": "Beyond reasonable doubt and probable cause: Historical perspectives on the Anglo-American law of evidence",
+                "authors": "Barbara J. Shapiro",
+                "isbn": "N/A"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 5002F - Law and Gender Relations",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Policing Black Lives: State Violence in Canada from Slavery to the Present",
+                "authors": "Robyn Maynard",
+                "isbn": "9781552669836"
+            },
+            {
+                "title": "Putting Trials on Trial: Sexual Assault and the Failure of the Legal Profession",
+                "authors": "Elaine Craig",
+                "isbn": "9780773553367"
+            },
+            {
+                "title": "Normal Life: Administrative Violence, Critical Trans-Politics and the Limits of Law (2nd Edition)",
+                "authors": "Dean Spade",
+                "isbn": "9780822360407"
+            },
+            {
+                "title": "Men, Masculinity and the Indian Act",
+                "authors": "Martin Cannon",
+                "isbn": "9780774861250"
+            },
+            {
+                "title": "Vicarious Kinks: S/M in the Socio-Legal Imaginary",
+                "authors": "Ummni Khan",
+                "isbn": "9781442616185"
+            }
+        ]
+    },
+    {
+        "Course": "LAWS 5004F – Law, Crime, and Social Order",
+        "Term": "FALL 2019",
+        "List of Required Textbooks": [
+            {
+                "title": "Discipline and Punish",
+                "authors": "Michel Foucault",
+                "isbn": ""
+            }
+        ]
+    }
+]

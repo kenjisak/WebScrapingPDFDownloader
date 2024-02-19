@@ -8,30 +8,25 @@ const openai = new OpenAIApi({
 });
 
 const DEFAULT_OPTIONS = {
-    max: 2,
+    max: 2,//option to only extract text from the first two pages
 }
 // Function to read all PDF files in a folder and extract text from the first two pages
 async function extractTextFromPDFs(folderName) {
-    
     var numReqTextFound = 0;
     const folderPath = path.join(__dirname, folderName);// Get the absolute path of the folder
     const files = fs.readdirSync(folderPath);// Read all files in the folder
     
     for (const file of files) {
-
         const filePath = path.join(folderPath, file);
         const dataBuffer = fs.readFileSync(filePath);// Read the PDF file
         
         pdfParse(dataBuffer,DEFAULT_OPTIONS).then(async function(data) {
-            
-            var jsonText = await getResponse(data.text);
+            var jsonText = await getResponse(data.text);//ask GPT-3.5 for the required textbooks from pdf scraped outline
             var jsonTextObj = JSON.parse(jsonText);
+            // console.log(jsonTextObj);
 
             if(jsonTextObj['List of Required Textbooks'].length > 0){
                 numReqTextFound++;
-                console.log("Num PDF Text Found: " + numReqTextFound);
-                // console.log(jsonTextObj);
-                
                 let rawdata = fs.readFileSync('foundTexts.json');
                 let foundTexts = JSON.parse(rawdata);
                 foundTexts.push(jsonTextObj);
@@ -41,7 +36,9 @@ async function extractTextFromPDFs(folderName) {
                 });
             }
         });
-        await sleep(20);//rate limit to request every 20 seconds, 3 requests per minute for GPT-3
+
+        console.log("Num PDF Text Found: " + numReqTextFound);
+        // await sleep(20);//rate limit to request every 20 seconds, 3 requests per minute for GPT-3.5
         break; // Remove this line to process all PDFs in the folder
     }
 }
@@ -51,12 +48,12 @@ async function getResponse(prompt) {
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo-0125",
         messages: [
-            { role: "user", content: "What are the Required Textbooks from this given outline? and output it in this given JSON format { Course:, Term:,List of Required Textbooks:[{ title:, authors:, isbn:}]} and ONLY that: " + prompt },
+            { role: "user", content: "What are the Required Textbooks from this given outline? and output it in this given JSON format { Course:, Term:,List of Required Textbooks:[{ title:, authors:, isbn:}]} and ONLY that, DO NOT ADD ANY ``` or json in the response: " + prompt },
             
             { role: "system", content: "You are a helpful assistant." }
         ],
         temperature: 0,
-        max_tokens: 300,
+        max_tokens: 1000,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
