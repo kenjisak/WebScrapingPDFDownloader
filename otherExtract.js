@@ -4,21 +4,37 @@ const pdfParse = require('pdf-parse');
 const OpenAIApi = require("openai");
 const mongoose = require("mongoose");
 
-let db = connectToDB();
-
 const openai = new OpenAIApi({
     apiKey: "sk-YourApiKeyHere",
 });
 
+let db = connectToDB();
+
+function connectToDB() {
+    let databaseName = "PDFTextbooksScraper";
+    mongoose.connect("mongodb://127.0.0.1:27017/" + databaseName);
+    
+    mongoose.connection.on("error", (err) => {
+      console.log("err", err);
+    });
+
+    mongoose.connection.on("connected", (err, res) => {
+      console.log("mongoose is connected");
+    });
+
+    console.log("Connected to MongoDB");
+    return mongoose.connection;
+}
+
 const DEFAULT_OPTIONS = {
     max: 2,//option to only extract text from the first two pages
 }
+
+let finishedPdfsID = new mongoose.Types.ObjectId('65d2e7261e8a2dfbfeb3efa4');
 // Function to read all PDF files in a folder and extract text from the first two pages
 async function extractTextFromPDFs(folderName) {
     const folderPath = path.join(__dirname, folderName);// Get the absolute path of the folder
     const files = fs.readdirSync(folderPath);// Read all files in the folder
-    
-    let finishedPdfsID = new mongoose.Types.ObjectId('65d2e7261e8a2dfbfeb3efa4');
 
     for (const file of files) {
         let pdfsDone = await db.collection("PDFsFinished").findOne({_id: finishedPdfsID});//get the finishedSet from the mongodb collection
@@ -31,26 +47,25 @@ async function extractTextFromPDFs(folderName) {
         const filePath = path.join(folderPath, file);
         const dataBuffer = fs.readFileSync(filePath);// Read the PDF file
         
-        pdfParse(dataBuffer,DEFAULT_OPTIONS).then(async function(data) {
-            var jsonText = await getResponse(data.text);//ask GPT-3.5 for the required textbooks from pdf scraped outline
-            var jsonTextObj = JSON.parse(jsonText);
-            jsonTextObj['PDF File'] = file;//add file name to json object
-            console.log(jsonTextObj);
+        let data = await pdfParse(dataBuffer,DEFAULT_OPTIONS);// Parse the PDF data
 
-            if(jsonTextObj['List of Required Textbooks'].length > 0){//textbooks were found
-                await db.collection('HasTextbooksList').insertOne(jsonTextObj);//add pdf textbooks object to a mongodb collection
-                console.log("Inserted to HasTextbooksList");
-            }else{//no textbooks were found
-                await db.collection('NoTextbooksList').insertOne(jsonTextObj);//add pdf textbooks object to a mongodb collection
-                console.log("Inserted to NoTextbooksList");
-            }
+        var jsonText = await getResponse(data.text);//ask GPT-3.5 for the required textbooks from pdf scraped outline
+        var jsonTextObj = JSON.parse(jsonText);
+        jsonTextObj['PDF File'] = file;//add file name to json object
+        console.log(jsonTextObj);
 
-            pdfsDone.push(file);//add file to finishedSet
-            await db.collection('PDFsFinished').updateOne({_id: finishedPdfsID}, {$set: {finishedSet: pdfsDone}});//add file to finishedSet
-            console.log("Updated PDFsFinished: ",file," added to finishedSet.");
-        });
+        if(jsonTextObj['List of Required Textbooks'].length > 0){//textbooks were found
+            await db.collection('HasTextbooksList').insertOne(jsonTextObj);//add pdf textbooks object to a mongodb collection
+            console.log("Inserted to HasTextbooksList");
+        }else{//no textbooks were found
+            await db.collection('NoTextbooksList').insertOne(jsonTextObj);//add pdf textbooks object to a mongodb collection
+            console.log("Inserted to NoTextbooksList");
+        }
 
-        console.log("Num PDF Text Found: " + numReqTextFound);
+        pdfsDone.push(file);//add file to finishedSet
+        await db.collection('PDFsFinished').updateOne({_id: finishedPdfsID}, {$set: {finishedSet: pdfsDone}});//add file to finishedSet
+        console.log("Updated PDFsFinished: ",file," added to finishedSet.");
+
         await sleep(20);//rate limit to request every 20 seconds, 3 requests per minute for GPT-3.5
         // break; // Remove this line to process all PDFs in the folder
     }
@@ -79,19 +94,6 @@ async function getResponse(prompt) {
 function sleep(seconds) {
     let ms = seconds * 1000;
     return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function connectToDB() {
-    let databaseName = "PDFTextbooksScraper";
-    mongoose.connect("mongodb://127.0.0.1:27017/" + databaseName);
-    mongoose.connection.on("error", (err) => {
-      console.log("err", err);
-    });
-    mongoose.connection.on("connected", (err, res) => {
-      console.log("mongoose is connected");
-    });
-    console.log("Connected to MongoDB");
-    return mongoose.connection;
 }
 
 // Call the function with the folder name
