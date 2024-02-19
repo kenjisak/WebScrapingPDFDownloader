@@ -13,7 +13,7 @@ let db = connectToDB();
 function connectToDB() {
     let databaseName = "PDFTextbooksScraper";
     mongoose.connect("mongodb://127.0.0.1:27017/" + databaseName);
-    
+
     mongoose.connection.on("error", (err) => {
       console.log("err", err);
     });
@@ -26,12 +26,8 @@ function connectToDB() {
     return mongoose.connection;
 }
 
-const DEFAULT_OPTIONS = {
-    max: 2,//option to only extract text from the first two pages
-}
-
 let finishedPdfsID = new mongoose.Types.ObjectId('65d2e7261e8a2dfbfeb3efa4');
-// Function to read all PDF files in a folder and extract text from the first two pages
+// Function to read all PDF files in a folder and extract text from the pdf
 async function extractTextFromPDFs(folderName) {
     const folderPath = path.join(__dirname, folderName);// Get the absolute path of the folder
     const files = fs.readdirSync(folderPath);// Read all files in the folder
@@ -47,10 +43,12 @@ async function extractTextFromPDFs(folderName) {
         const filePath = path.join(folderPath, file);
         const dataBuffer = fs.readFileSync(filePath);// Read the PDF file
         
-        let data = await pdfParse(dataBuffer,DEFAULT_OPTIONS);// Parse the PDF data
+        let data = await pdfParse(dataBuffer);// Parse the PDF data
+        let response = await getResponse(data.text);//ask GPT-3.5 for the required textbooks from pdf scraped outline
 
-        var jsonText = await getResponse(data.text);//ask GPT-3.5 for the required textbooks from pdf scraped outline
-        var jsonTextObj = JSON.parse(jsonText);
+        let jsonText = response.choices[0].message.content;//get the response from GPT-3.5
+        // console.log(jsonText);
+        let jsonTextObj = JSON.parse(jsonText);
         jsonTextObj['PDF File'] = file;//add file name to json object
         console.log(jsonTextObj);
 
@@ -77,18 +75,17 @@ async function getResponse(prompt) {
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo-0125",
         messages: [
-            { role: "user", content: "What are the Required Textbooks from this given outline? and output it in this given JSON format { Course:, Term:,List of Required Textbooks:[{ title:, authors:, isbn:}]} and ONLY that: " + prompt },
+            { role: "user", content: "What are the Required Textbooks from this given outline? and output it in this given JSON format { Course:, Term:,List of Required Textbooks:[{ title:, authors:, isbn:}]} and ONLY that. course materials/ course pack doesn't count, just real Textbooks: " + prompt },
             
             { role: "system", content: "You are a helpful assistant." }
         ],
         temperature: 0,
-        max_tokens: 1000,
+        max_tokens: 4096,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-        
     });
-    return response.choices[0].message.content;
+    return response;
 };
 
 function sleep(seconds) {
