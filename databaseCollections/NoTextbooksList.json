@@ -1,0 +1,117 @@
+[{
+  "_id": {
+    "$oid": "65d3a9fa6423575ea47e9e1c"
+  },
+  "Course": "LAWS 3305A - Crime and State in History",
+  "Term": "FALL 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "3305A-Kropf-Fall-2019-1.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3aaac6423575ea47e9e3c"
+  },
+  "Course": "LAWS 3503A - Equality & Discrimination",
+  "Term": "FALL 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "3503A-Steiner-Fall-2019.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3aad76423575ea47e9e44"
+  },
+  "Course": "LAWS 3602B - International Human Rights",
+  "Term": "FALL 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "3602B-Balasubramaniam-Fall-2019.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3aaed6423575ea47e9e48"
+  },
+  "Course": "LAWS 3604A - International Organizations",
+  "Term": "FALL 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "3604A-Sookmark-Fall-2019.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3ab2f6423575ea47e9e54"
+  },
+  "Course": "LAWS 4100A - Modern Legal Theory",
+  "Term": "FALL 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "4100A-Balasubramaniam-Fall-2019.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3ac846423575ea47e9e8c"
+  },
+  "Course": "LAWS 4607A - Immigration and Refugee Law",
+  "Term": "FALL 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "4607A-Gaucher-Fall-2019.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3adfe6423575ea47e9ec4"
+  },
+  "Course": "LAWS 2105C – Human Rights and Social Justice",
+  "Term": "WINTER 2020",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-2105-C.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3af3a6423575ea47e9efc"
+  },
+  "Course": "LAWS 3001A: Women and the Legal Process",
+  "Term": "Winter 2020",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-3001-A.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3afc06423575ea47e9f14"
+  },
+  "Course": "LAWS 3307C and 3307V –  Youth and Criminal Law",
+  "Term": "Winter 2020",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-3307-CV.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3b1936423575ea47e9f60"
+  },
+  "Course": "LAWS 4303E – Drugs, the User, and the State",
+  "Term": "WINTER 2020",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-4303-E.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3b1be6423575ea47e9f68"
+  },
+  "Course": "LAWS 4305B Criminal Justice Reform",
+  "Term": "WINTER 2020",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-4305-B.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d3b3c15d136807f54b0e80"
+  },
+  "Course": "LAWS 4504 A: Indigenous Criminal Justice",
+  "Term": "Winter 2020",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-4504.pdf"
+},
+{
+  "_id": {
+    "$oid": "65d4f0d33ddfff2eca3d3d47"
+  },
+  "Course": "LAWS 4603B—Transitional Justice",
+  "Term": "Winter 2019",
+  "List of Required Textbooks": [],
+  "PDF File": "LAWS-4603-B-Revised-.pdf"
+}]

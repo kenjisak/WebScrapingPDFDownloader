@@ -68,13 +68,13 @@ const downloadPDF = async (pdfUrl, folderName, fileName) => {
     }
 };
 
-//Triggered when the queue becomes empty
+//Triggered when the crawler queue becomes empty
 c.on('drain',async function(){
     console.log("Done.");
     downloadLinks.forEach(async link => {
         var linkCopy = link.toLowerCase();
         if(linkCopy.includes("application") || linkCopy.includes("form") || linkCopy.includes("faq") || linkCopy.includes("guideline")){
-            downloadLinks.delete(link);
+            downloadLinks.delete(link);//gets rid of random pdfs that are not course outlines
         }else{
             var fileName = link.split("/");
             fileName = fileName[fileName.length - 1];
@@ -87,5 +87,5 @@ c.on('drain',async function(){
     console.log("Links Downloaded Size: ",downloadLinks.size);
 });
 
-//Queue a URL, which starts the crawl
+//URL to scrape pdfs from
 c.queue('https://carleton.ca/law/course-outlines-fall-winter-2019-2020/');
